@@ -440,6 +440,9 @@
 #define L_NETWORK_EN_OTA "Enable OTA Mode"
 #define L_REBOOT_OTA "Reboot into OTA mode"
 
+#define L_FIRMWARE_UPDATE "Firmware Update"
+#define L_TO_UPDATE_PAGE "Go to Update Page"
+
 #define L_NETWORK_CONFIG_SECURITY "Network Configuration Security"
 
 #define L_NETWORK_AP "Access-Point mode (auto-enabled if Station mode fails to connect)"

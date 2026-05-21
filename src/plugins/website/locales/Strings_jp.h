@@ -440,6 +440,8 @@
 #define L_REBOOT_OTA "Reboot into OTA mode"
 #define L_NETWORK_CONFIG_SECURITY "ネットワーク設定セキュリティ"
 
+#define L_FIRMWARE_UPDATE "ファームウェアアップデート"
+#define L_TO_UPDATE_PAGE "アップデートページへ"
 
 #define L_NETWORK_AP "アクセスポイントモード"
 
