@@ -13,7 +13,7 @@
 //      Parameter Name              Value   Default  Notes                                                                      Hint
 // DISPLAY -------------------------------------------------------------------------------------------------------------------------
 #ifndef DISPLAY_LANGUAGE
-#define DISPLAY_LANGUAGE             L_en //   L_en, English. Or L_ca, L_cn, L_de, L_en, L_es, L_fr, L_it, L_jp, L_us.        Adjust
+#define DISPLAY_LANGUAGE             L_jp //   L_en, English. Or L_ca, L_cn, L_de, L_en, L_es, L_fr, L_it, L_jp, L_us.        Adjust
                                           //         Two letter country code (see Locales.h for more information.)
 #endif
 #ifndef DISPLAY_WEATHER
