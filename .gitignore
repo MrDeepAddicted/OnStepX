@@ -8,7 +8,7 @@ Debug/*
 Release/*
 debug.cfg
 esp32.svd
-src/plugins/*
+# src/plugins/*
 debug.svd
 z.*
 .pio/
