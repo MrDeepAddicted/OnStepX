@@ -442,6 +442,9 @@
 
 #define L_NETWORK_CONFIG_SECURITY "Network Configuration Security"
 
+#define L_FIRMWARE_UPDATE "Firmware Update"
+#define L_TO_UPDATE_PAGE "Go to Update Page"
+
 #define L_NETWORK_AP "Access-Point mode (auto-enabled if Station mode fails to connect)"
 
 #define L_NETWORK_RESTART_MSG "You must <u>manually</u> restart for changes to take effect."

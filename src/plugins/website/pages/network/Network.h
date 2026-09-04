@@ -95,6 +95,11 @@ L_NETWORK_PWD ": <input style='width:8em; text-align:left;' name='webpwd' type='
 "<form method='post' action='/net.htm'>"
 "<button type='submit' name='logout' value='1'>" L_LOGOUT "</button></form><br />\n";
 
+const char html_update[] PROGMEM =
+"<br/><b>" L_FIRMWARE_UPDATE":</b><br/>"
+"<form action='/update'>"
+"<button type='submit' name='update' value='1'>" L_TO_UPDATE_PAGE "</button></form><br />\n";
+
 const char html_reboot[] PROGMEM =
 "<br/><br/><br/><br/><br/><form method='post' action='/net.htm'>"
 "<b>" L_NETWORK_RESTART_MSG "</b><br/><br/>"

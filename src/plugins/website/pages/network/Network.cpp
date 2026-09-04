@@ -171,6 +171,7 @@ void handleNetwork() {
 
     data.concat(F("<br class='clear' /><hr>"));
     data.concat(FPSTR(html_logout));
+    data.concat(FPSTR(html_update));
     data.concat(F("<hr>"));
   }
 
