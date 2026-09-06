@@ -19,7 +19,7 @@
 #define HOST_NAME           "OSX-K1-WiFi" // "OnStep", Hostname for this device up to 16 chars.                                 Adjust
 
 // PINMAP ------------------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration_Controller#PINMAP
-#define PINMAP                    MaxESP4 //    OFF, Choose from: MiniPCB, MiniPCB2, MaxPCB4, MaxESP4, MaxSTM3, FYSETC_E4,   <-Req'd
+#define PINMAP                       CNC3 //    OFF, Choose from: MiniPCB, MiniPCB2, MaxPCB4, MaxESP4, MaxSTM3, FYSETC_E4,   <-Req'd
                                           //         BTT_SKR_PRO, etc.  Other boards and more info. in ~/src/Constants.h
 
 // SERIAL PORT COMMAND CHANNELS --------------------- see https://onstep.groups.io/g/main/wiki/Configuration_Controller#SERIAL_PORTS
@@ -58,7 +58,7 @@
 // Typically: A4988, DRV8825, LV8729, S109, TMC2130, TMC5160, TMC2209, etc.
 
 // AXIS1 RA/AZM -------------------------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration_Axes
-#define AXIS1_DRIVER_MODEL        TMC2209 //    OFF, Enter motor driver model (above) in both axes to activate the mount.    <-Often
+#define AXIS1_DRIVER_MODEL       TMC2209S //    OFF, Enter motor driver model (above) in both axes to activate the mount.    <-Often
 
 // If runtime axis settings are enabled changes in the section below will be ignored (disable in SWS or by wiping NV/EEPROM):
 // \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ \/ 
@@ -73,15 +73,15 @@
 #define AXIS1_DRIVER_MICROSTEPS_GOTO    4 //    OFF, n. Goto microstep mode override. OFF uses _DRIVER_MICROSTEPS.            Option
 
 // for TMC2130, TMC5160, TMC2209, TMC2226 STEP/DIR driver models:
-#define AXIS1_DRIVER_IHOLD            300 //    OFF, n, (mA.) Current during standstill. OFF uses IRUN/2.0                    Option
-#define AXIS1_DRIVER_IRUN             600 //    OFF, n, (mA.) Default run current, appropriate for stepper/driver/etc.        Option
-#define AXIS1_DRIVER_IGOTO            900 //    OFF, n, (mA.) Run current override for slews. OFF uses IRUN.                  Option
+#define AXIS1_DRIVER_IHOLD            OFF //    OFF, n, (mA.) Current during standstill. OFF uses IRUN/2.0                    Option
+#define AXIS1_DRIVER_IRUN             OFF //    OFF, n, (mA.) Default run current, appropriate for stepper/driver/etc.        Option
+#define AXIS1_DRIVER_IGOTO            OFF //    OFF, n, (mA.) Run current override for slews. OFF uses IRUN.                  Option
 // /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /
 
 #define AXIS1_DRIVER_STATUS           OFF //    OFF, ON, HIGH, or LOW.  For driver status info/fault detection.               Option
 
-#define AXIS1_DRIVER_DECAY    STEALTHCHOP //    OFF, Tracking decay mode default override. TMC default is STEALTHCHOP.        Infreq
-#define AXIS1_DRIVER_DECAY_GOTO SPREADCYCLE //    OFF, Decay mode goto default override. TMC default is SPREADCYCLE.            Infreq
+#define AXIS1_DRIVER_DECAY            OFF //    OFF, Tracking decay mode default override. TMC default is STEALTHCHOP.        Infreq
+#define AXIS1_DRIVER_DECAY_GOTO       OFF //    OFF, Decay mode goto default override. TMC default is SPREADCYCLE.            Infreq
 
 #define AXIS1_POWER_DOWN              OFF //    OFF, ON Powers off 30sec after movement stops or 10min after last<=1x guide.  Infreq
 
@@ -109,15 +109,15 @@
 #define AXIS2_DRIVER_MICROSTEPS_GOTO    4 //    OFF, n. Goto microstep mode override. OFF uses _DRIVER_MICROSTEPS.            Option
 
 // for TMC2130, TMC5160, TMC2209, TMC2226 STEP/DIR driver models:
-#define AXIS2_DRIVER_IHOLD            300 //    OFF, n, (mA.) Current during standstill. OFF uses IRUN/2.0                    Option
-#define AXIS2_DRIVER_IRUN             600 //    OFF, n, (mA.) Default run current, appropriate for stepper/driver/etc.        Option
-#define AXIS2_DRIVER_IGOTO            900 //    OFF, n, (mA.) Run current override for slews. OFF uses IRUN.                  Option
+#define AXIS2_DRIVER_IHOLD            OFF //    OFF, n, (mA.) Current during standstill. OFF uses IRUN/2.0                    Option
+#define AXIS2_DRIVER_IRUN             OFF //    OFF, n, (mA.) Default run current, appropriate for stepper/driver/etc.        Option
+#define AXIS2_DRIVER_IGOTO            OFF //    OFF, n, (mA.) Run current override for slews. OFF uses IRUN.                  Option
 // /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /
 
 #define AXIS2_DRIVER_STATUS           OFF //    OFF, ON, HIGH, or LOW.  Polling for driver status info/fault detection.       Option
 
-#define AXIS2_DRIVER_DECAY    STEALTHCHOP //    OFF, Tracking decay mode default override. TMC default is STEALTHCHOP.        Infreq
-#define AXIS2_DRIVER_DECAY_GOTO SPREADCYCLE //    OFF, Decay mode goto default override. TMC default is SPREADCYCLE.            Infreq
+#define AXIS2_DRIVER_DECAY            OFF //    OFF, Tracking decay mode default override. TMC default is STEALTHCHOP.        Infreq
+#define AXIS2_DRIVER_DECAY_GOTO       OFF //    OFF, Decay mode goto default override. TMC default is SPREADCYCLE.            Infreq
 
 #define AXIS2_POWER_DOWN              OFF //    OFF, ON Powers off 30sec after movement stops or 10min after last<=1x guide.  Option
 
