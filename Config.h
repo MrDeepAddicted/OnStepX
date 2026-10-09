@@ -16,7 +16,7 @@
 
 // =================================================================================================================================
 // CONTROLLER ======================================================================================================================
-#define HOST_NAME           "OSX-K1-WiFi" // "OnStep", Hostname for this device up to 16 chars.                                 Adjust
+#define HOST_NAME           "OSX-K1-0049" // "OnStep", Hostname for this device up to 16 chars.                                 Adjust
 
 // PINMAP ------------------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration_Controller#PINMAP
 #define PINMAP                    MaxESP4 //    OFF, Choose from: MiniPCB, MiniPCB2, MaxPCB4, MaxESP4, MaxSTM3, FYSETC_E4,   <-Req'd
