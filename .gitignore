@@ -13,4 +13,6 @@ debug.svd
 z.*
 .pio/
 .vscode/
+.DS_Store
+.gitignore
 !.vscode/extensions.json
