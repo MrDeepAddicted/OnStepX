@@ -16,7 +16,7 @@
 
 // =================================================================================================================================
 // CONTROLLER ======================================================================================================================
-#define HOST_NAME           "OSX-K1-0049" // "OnStep", Hostname for this device up to 16 chars.                                 Adjust
+#define HOST_NAME           "OSX-K1-0047" // "OnStep", Hostname for this device up to 16 chars.                                 Adjust
 
 // PINMAP ------------------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration_Controller#PINMAP
 #define PINMAP                    MaxESP4 //    OFF, Choose from: MiniPCB, MiniPCB2, MaxPCB4, MaxESP4, MaxSTM3, FYSETC_E4,   <-Req'd
@@ -70,7 +70,7 @@
 #define AXIS1_LIMIT_SYNC              OFF //    OFF, n. Where n= 0..90 (degrees.) Allow sync/reset only within this +/-range. Option
 
 #define AXIS1_DRIVER_MICROSTEPS        32 //    OFF, n. Default microstep mode.                                              <-Req'd
-#define AXIS1_DRIVER_MICROSTEPS_GOTO    4 //    OFF, n. Goto microstep mode override. OFF uses _DRIVER_MICROSTEPS.            Option
+#define AXIS1_DRIVER_MICROSTEPS_GOTO   16 //    OFF, n. Goto microstep mode override. OFF uses _DRIVER_MICROSTEPS.            Option
 
 // for TMC2130, TMC5160, TMC2209, TMC2226 STEP/DIR driver models:
 #define AXIS1_DRIVER_IHOLD            300 //    OFF, n, (mA.) Current during standstill. OFF uses IRUN/2.0                    Option
@@ -106,7 +106,7 @@
 #define AXIS2_LIMIT_SYNC              OFF //    OFF, n. Where n= 0..90 (degrees.) Allow sync/reset only within this +/-range. Option
 
 #define AXIS2_DRIVER_MICROSTEPS        32 //    OFF, n. Default microstep mode.                                              <-Req'd
-#define AXIS2_DRIVER_MICROSTEPS_GOTO    4 //    OFF, n. Goto microstep mode override. OFF uses _DRIVER_MICROSTEPS.            Option
+#define AXIS2_DRIVER_MICROSTEPS_GOTO   16 //    OFF, n. Goto microstep mode override. OFF uses _DRIVER_MICROSTEPS.            Option
 
 // for TMC2130, TMC5160, TMC2209, TMC2226 STEP/DIR driver models:
 #define AXIS2_DRIVER_IHOLD            300 //    OFF, n, (mA.) Current during standstill. OFF uses IRUN/2.0                    Option
@@ -166,7 +166,9 @@
 // ST4 INTERFACE -------------------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration_Mount#ST4
 // *** It is up to you to verify the interface meets the electrical specifications of any connected device, use at your own risk ***
 #define ST4_INTERFACE                  ON //    OFF, ON enables interface. <= 1X guides unless hand control mode.             Option
-                                          //         During goto btn press: aborts slew or continue meridian flip pause home
+#define ST4_INTERFACE_INIT   INPUT_PULLUP //
+
+//         During goto btn press: aborts slew or continue meridian flip pause home
 #define ST4_HAND_CONTROL               ON //     ON, ON for hand controller special features and SHC support.                 Option
                                           //         Hold [E]+[W] btns >2s: Guide rate   [E]-  [W]+  [N] trk on/off [S] sync
                                           //         Hold [N]+[S] btns >2s: Usr cat item [E]-  [W]+  [N] goto [S] snd on/off
@@ -205,7 +207,7 @@
 // SLEWING BEHAVIOUR ------------------------------------------ see https://onstep.groups.io/g/main/wiki/Configuration_Mount#SLEWING
 #define SLEW_RATE_BASE_DESIRED        2.0 //    1.0, n. Desired slew rate in deg/sec. Adjustable at run-time from            <-Req'd
                                           //         1/2 to 2x this rate, and as performace considerations require.
-#define SLEW_RATE_MEMORY              OFF //    OFF, ON Remembers rates set across power cycles.                              Option
+#define SLEW_RATE_MEMORY               ON //    OFF, ON Remembers rates set across power cycles.                              Option
 #define SLEW_ACCELERATION_DIST        5.0 //    5.0, n, (degrees.) Approx. distance for acceleration (and deceleration.)      Adjust
 #define SLEW_RAPID_STOP_DIST          2.0 //    2.0, n, (degrees.) Approx. distance required to stop when a slew              Adjust
                                           //         is aborted or a limit is exceeded.
