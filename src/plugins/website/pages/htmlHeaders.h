@@ -130,7 +130,7 @@ const char html_main_css_collapse[] PROGMEM =
 ".active, .collapsible:hover { background-color: " COLOR_COLLAPSIBLE_ACTIVE_BACKGROUND "; } .content { padding: 2px 18px; display: none; overflow: hidden; background-color: " COLOR_COLLAPSIBLE_CONTENT_BACKGROUND "; }";
 
 // responsive layout, emitted last so it overrides the rules above (all pages use html_main_css_end)
-const char html_main_css_end[] PROGMEM =
+const char html_main_css_end[] PROGMEM = 
 "html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; } body { margin: 0; }"
 ".b1 { max-width: calc(100% - 44px); } textarea { max-width: 100%; box-sizing: border-box; } canvas { max-width: 100%; height: auto; box-sizing: border-box; }"
 "@media (max-width: 600px) {"

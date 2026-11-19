@@ -16,7 +16,7 @@
 
 // =================================================================================================================================
 // CONTROLLER ======================================================================================================================
-#define HOST_NAME           "OSX-K1-0047" // "OnStep", Hostname for this device up to 16 chars.                                 Adjust
+#define HOST_NAME           "OSX-K1-0054" // "OnStep", Hostname for this device up to 16 chars.                                 Adjust
 
 // PINMAP ------------------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration_Controller#PINMAP
 #define PINMAP                    MaxESP4 //    OFF, Choose from: MiniPCB, MiniPCB2, MaxPCB4, MaxESP4, MaxSTM3, FYSETC_E4,   <-Req'd
@@ -166,7 +166,6 @@
 // ST4 INTERFACE -------------------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration_Mount#ST4
 // *** It is up to you to verify the interface meets the electrical specifications of any connected device, use at your own risk ***
 #define ST4_INTERFACE                  ON //    OFF, ON enables interface. <= 1X guides unless hand control mode.             Option
-#define ST4_INTERFACE_INIT   INPUT_PULLUP //
 
 //         During goto btn press: aborts slew or continue meridian flip pause home
 #define ST4_HAND_CONTROL               ON //     ON, ON for hand controller special features and SHC support.                 Option
