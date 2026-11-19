@@ -22,14 +22,14 @@
 #ifndef DISPLAY_INTERNAL_TEMPERATURE
 #define DISPLAY_INTERNAL_TEMPERATURE  OFF //    OFF, ON internal MCU temp. in locale default units.                           Option
 #endif
-#ifndef DISPLAY_WIFI_SIGNAL_STRENGTH
-#define DISPLAY_WIFI_SIGNAL_STRENGTH   ON //     ON, Wireless signal strength reported via web interface. OFF otherwise.      Option
-#endif
 #ifndef DISPLAY_COORDINATE_ORIGIN
 #define DISPLAY_COORDINATE_ORIGIN     OFF //    OFF, ON to display the coordinate origin control tile on the mount page.      Option
 #endif
 #ifndef DISPLAY_SERVO_MONITOR
 #define DISPLAY_SERVO_MONITOR         OFF //    OFF, ON to display the servo monitor (any axis.)                              Option
+#endif
+#ifndef DISPLAY_STALLGUARD_MONITOR
+#define DISPLAY_STALLGUARD_MONITOR    OFF //    OFF, ON to display the StallGuard monitor (any supported axis.)               Option
 #endif
 #ifndef DISPLAY_RESET_CONTROLS
 #define DISPLAY_RESET_CONTROLS         ON //     ON, ON to allow reset of OnStep, FWU for STM32 firmware upload pin HIGH.     Option

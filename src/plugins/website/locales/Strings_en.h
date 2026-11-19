@@ -26,6 +26,8 @@
 #define L_OK "Ok"
 #define L_ON "On"
 #define L_OFF "Off"
+#define L_VISIT "Visit"
+#define L_PAUSE "Pause"
 #define L_START "Start"
 #define L_DELTA "Delta"
 #define L_DP_MSG "Relative"
@@ -309,6 +311,7 @@
 #define L_MERIDIAN_FLIP_AUTO "Automatic Meridian Flip at Limit"
 #define L_MERIDIAN_FLIP_NOW "Now"
 #define L_MERIDIAN_FLIP_PAUSE "Meridian Flip, Pause at Home"
+#define L_MERIDIAN_FLIP_HOMING "Meridian Flip Homing"
 #define L_MERIDIAN_FLIP_PPS "Meridian Flip, Preferred Pier Side"
 
 #define L_ORIENTATION_AUTO "Orientation Change"
@@ -349,6 +352,17 @@
 #define L_LIMITS_RANGE_OVERHEAD "Overhead, max altitude 60 to 90&deg;"
 #define L_LIMITS_RANGE_MERIDIAN_E "Past Meridian, East of pier &pm;270&deg;"
 #define L_LIMITS_RANGE_MERIDIAN_W "Past Meridian, West of pier &pm;270&deg;"
+
+// runtime sync limits
+#define L_SYNC_LIMITS_TITLE "Sync/Align Limits"
+#define L_SYNC_LIMIT_SUMMARY_POLAR "Limit Polar Sync"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET1 "Limit Offset Sync, Axis1"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET2 "Axis2"
+#define L_SYNC_LIMIT_POLAR "Polar, 60 to 90&deg;"
+#define L_SYNC_LIMIT_AXIS1 "Axis1 Offset, 0 to 30&deg;"
+#define L_SYNC_LIMIT_AXIS2 "Axis2 Offset, 0 to 30&deg;"
+#define L_SYNC_LIMIT_POLAR_OFF "Polar 90 = OFF"
+#define L_SYNC_LIMIT_OFFSET_OFF "Offset 0 = OFF"
 
 // location
 #define L_LOCATION_TITLE "Time and Location"
@@ -441,9 +455,6 @@
 #define L_REBOOT_OTA "Reboot into OTA mode"
 
 #define L_NETWORK_CONFIG_SECURITY "Network Configuration Security"
-
-#define L_FIRMWARE_UPDATE "Firmware Update"
-#define L_TO_UPDATE_PAGE "Go to Update Page"
 
 #define L_NETWORK_AP "Access-Point mode (auto-enabled if Station mode fails to connect)"
 

@@ -26,6 +26,8 @@
 #define L_OK "Ok"
 #define L_ON "On"
 #define L_OFF "Off"
+#define L_VISIT "Visita"
+#define L_PAUSE "Pausa"
 #define L_START "Avvia"
 #define L_DELTA "Delta"
 #define L_DP_MSG "Relativa"
@@ -309,6 +311,7 @@
 #define L_MERIDIAN_FLIP_AUTO "Flip meridiano auto"
 #define L_MERIDIAN_FLIP_NOW "Ora"
 #define L_MERIDIAN_FLIP_PAUSE "Flip meridiano, pausa home"
+#define L_MERIDIAN_FLIP_HOMING "Flip meridiano, home"
 #define L_MERIDIAN_FLIP_PPS "Flip meridiano, lato pref."
 
 #define L_ORIENTATION_AUTO "Cambio orient."
@@ -349,6 +352,17 @@
 #define L_LIMITS_RANGE_OVERHEAD "Zenit, altitudine max 60 a 90&deg;"
 #define L_LIMITS_RANGE_MERIDIAN_E "Oltre meridiano, Est del pier &pm;270&deg;"
 #define L_LIMITS_RANGE_MERIDIAN_W "Oltre meridiano, Ovest del pier &pm;270&deg;"
+
+// runtime sync limits
+#define L_SYNC_LIMITS_TITLE "Limiti di sincronizzazione/allineamento"
+#define L_SYNC_LIMIT_SUMMARY_POLAR "Limite polare"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET1 "Limite offset, Asse1"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET2 "Asse2"
+#define L_SYNC_LIMIT_POLAR "Polare, 60 a 90&deg;"
+#define L_SYNC_LIMIT_AXIS1 "Offset asse 1, 0 a 30&deg;"
+#define L_SYNC_LIMIT_AXIS2 "Offset asse 2, 0 a 30&deg;"
+#define L_SYNC_LIMIT_POLAR_OFF "Polare 90 = OFF"
+#define L_SYNC_LIMIT_OFFSET_OFF "Offset 0 = OFF"
 
 // location
 #define L_LOCATION_TITLE "Ora e posizione"

@@ -35,6 +35,8 @@
 #define L_OK "Tun"
 #define L_ON "An"
 #define L_OFF "Aus"
+#define L_VISIT "Anfahren"
+#define L_PAUSE "Pause"
 #define L_START "Anfang"
 #define L_DELTA "Delta"
 #define L_DP_MSG  "Rel."
@@ -319,6 +321,7 @@
 #define L_MERIDIAN_FLIP_AUTO "Automatischer Meridianflip bei Grenz&uuml;berschreitung"
 #define L_MERIDIAN_FLIP_NOW "Jetzt"
 #define L_MERIDIAN_FLIP_PAUSE "Pausiere an Homeposition w&auml;hrend Meridian Flip"
+#define L_MERIDIAN_FLIP_HOMING "Meridianflip, Homeposition"
 #define L_MERIDIAN_FLIP_PPS "Meridianflip, bevorzugte Pierseite"
 
 #define L_ORIENTATION_AUTO "Orientierungsänderung"
@@ -359,6 +362,17 @@
 #define L_LIMITS_RANGE_OVERHEAD "Obergrenze, in Grad 60 to 90"
 #define L_LIMITS_RANGE_MERIDIAN_E "Nach Meridian wenn Teleskop auf Ostseite der Montierung, in Grad +/- 270"
 #define L_LIMITS_RANGE_MERIDIAN_W "Nach Meridian wenn Teleskop auf Westseite der Montierung, in Grad +/- 270"
+
+// runtime sync limits
+#define L_SYNC_LIMITS_TITLE "Sync/Alignment-Grenzen"
+#define L_SYNC_LIMIT_SUMMARY_POLAR "Polgrenze"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET1 "Offset-Grenze, Achse1"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET2 "Achse2"
+#define L_SYNC_LIMIT_POLAR "Pol, 60 bis 90&deg;"
+#define L_SYNC_LIMIT_AXIS1 "Offset Achse 1, 0 bis 30&deg;"
+#define L_SYNC_LIMIT_AXIS2 "Offset Achse 2, 0 bis 30&deg;"
+#define L_SYNC_LIMIT_POLAR_OFF "Pol 90 = OFF"
+#define L_SYNC_LIMIT_OFFSET_OFF "Offset 0 = OFF"
 
 // location
 #define L_LOCATION_TITLE "Zeit und Ort"

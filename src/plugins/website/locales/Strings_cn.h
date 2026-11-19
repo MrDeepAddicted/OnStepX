@@ -26,6 +26,8 @@
 #define L_OK "Ok"
 #define L_ON "开"
 #define L_OFF "关"
+#define L_VISIT "经过"
+#define L_PAUSE "暂停"
 #define L_START "开始"
 #define L_DELTA "对冲值"
 #define L_DP_MSG  "相对"
@@ -310,6 +312,7 @@
 #define L_MERIDIAN_FLIP_AUTO "越过边界时自动翻转子午线"
 #define L_MERIDIAN_FLIP_NOW "目前"
 #define L_MERIDIAN_FLIP_PAUSE "子午线翻转期间在原始位置暂停"
+#define L_MERIDIAN_FLIP_HOMING "子午线翻转归位"
 #define L_MERIDIAN_FLIP_PPS "经络翻转, 首选码头侧"
 
 #define L_ORIENTATION_AUTO "方向改变"
@@ -350,6 +353,17 @@
 #define L_LIMITS_RANGE_OVERHEAD "上限，以60到90度为单位"
 #define L_LIMITS_RANGE_MERIDIAN_E "如果将望远镜放在坐骑的东侧，则指向子午线，以+/- 270度为单位"
 #define L_LIMITS_RANGE_MERIDIAN_W "如果将望远镜放在坐骑西侧，则指向子午线，以+/- 270度为单位"
+
+// runtime sync limits
+#define L_SYNC_LIMITS_TITLE "同步/校准限制"
+#define L_SYNC_LIMIT_SUMMARY_POLAR "天极限制"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET1 "偏移限制，轴1"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET2 "轴2"
+#define L_SYNC_LIMIT_POLAR "天极，60至90&deg;"
+#define L_SYNC_LIMIT_AXIS1 "轴1偏移，0至30&deg;"
+#define L_SYNC_LIMIT_AXIS2 "轴2偏移，0至30&deg;"
+#define L_SYNC_LIMIT_POLAR_OFF "天极 90 = OFF"
+#define L_SYNC_LIMIT_OFFSET_OFF "偏移 0 = OFF"
 
 // location
 #define L_LOCATION_TITLE "时间地点"

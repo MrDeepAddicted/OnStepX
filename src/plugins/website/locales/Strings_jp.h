@@ -26,6 +26,8 @@
 #define L_OK "OK"
 #define L_ON "ON"
 #define L_OFF "OFF"
+#define L_VISIT "経由"
+#define L_PAUSE "一時停止"
 #define L_START "開始"
 #define L_DELTA "差分(Delta)"
 #define L_DP_MSG "相対"
@@ -309,6 +311,7 @@
 #define L_MERIDIAN_FLIP_AUTO "境界を超えた際に自動で子午線反転"
 #define L_MERIDIAN_FLIP_NOW "今すぐ実行"
 #define L_MERIDIAN_FLIP_PAUSE "子午線反転、ホームで一時停止"
+#define L_MERIDIAN_FLIP_HOMING "子午線反転、ホーム動作"
 #define L_MERIDIAN_FLIP_PPS "子午線反転、優先ピアサイド"
 
 #define L_ORIENTATION_AUTO "方向転換"
@@ -349,6 +352,17 @@
 #define L_LIMITS_RANGE_OVERHEAD "天頂(Overhead), 最大高度 60 ～ 90&deg;"
 #define L_LIMITS_RANGE_MERIDIAN_E "子午線越え, ピアの東側 &pm;270&deg;"
 #define L_LIMITS_RANGE_MERIDIAN_W "子午線越え, ピアの西側 &pm;270&deg;"
+
+// runtime sync limits
+#define L_SYNC_LIMITS_TITLE "同期・アライメントリミット"
+#define L_SYNC_LIMIT_SUMMARY_POLAR "極付近のリミット"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET1 "オフセットリミット、軸1"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET2 "軸2"
+#define L_SYNC_LIMIT_POLAR "極付近、60～90&deg;"
+#define L_SYNC_LIMIT_AXIS1 "軸1オフセット、0～30&deg;"
+#define L_SYNC_LIMIT_AXIS2 "軸2オフセット、0～30&deg;"
+#define L_SYNC_LIMIT_POLAR_OFF "極付近 90 = OFF"
+#define L_SYNC_LIMIT_OFFSET_OFF "オフセット 0 = OFF"
 
 // location
 #define L_LOCATION_TITLE "時刻と場所"
@@ -440,8 +454,6 @@
 #define L_REBOOT_OTA "Reboot into OTA mode"
 #define L_NETWORK_CONFIG_SECURITY "ネットワーク設定セキュリティ"
 
-#define L_FIRMWARE_UPDATE "ファームウェアアップデート"
-#define L_TO_UPDATE_PAGE "アップデートページへ"
 
 #define L_NETWORK_AP "アクセスポイントモード"
 

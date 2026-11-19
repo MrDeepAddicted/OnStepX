@@ -103,10 +103,10 @@ const char html_main_css_begin[] PROGMEM =
 const char html_main_css_core[] PROGMEM =
 ".clear { clear: both; } .a { background-color: " COLOR_BACKGROUND "; } "
 ".t { padding: 10px 10px 20px 10px; border: 5px solid " COLOR_BORDER "; margin: 25px 25px 0px 25px;"
-"color: " COLOR_FOREGROUND "; background-color: " COLOR_BACKGROUND "; min-width: 36em; } "
+"color: " COLOR_FOREGROUND "; background-color: " COLOR_BACKGROUND "; } "
 "input { text-align:center; padding: 2px; margin: 3px; font-weight: bold; width:5em; background-color: " COLOR_CONTROL "}"
 ".b { padding: 10px; border-left: 5px solid " COLOR_BORDER "; border-right: 5px solid " COLOR_BORDER "; border-bottom: 5px solid " COLOR_BORDER "; margin: 0px 25px 25px 25px; color: " COLOR_FOREGROUND ";"
-"background-color: " COLOR_BACKGROUND "; min-width: 36em; } select { width:4em; font-weight: bold; background-color: " COLOR_CONTROL "; padding: 2px 2px; }"
+"background-color: " COLOR_BACKGROUND "; } select { width:4em; font-weight: bold; background-color: " COLOR_CONTROL "; padding: 2px 2px; }"
 ".c { color: " COLOR_CONTROL "; font-weight: bold; }"
 "h1 { text-align: right; } a:hover, a:active { background-color: " COLOR_LINK_BORDER "; } .y { color: " COLOR_ALERT "; font-weight: bold; }"
 "a:link, a:visited { background-color: " COLOR_LINK_BACKGROUND "; color: " COLOR_LINK "; border:1px solid " COLOR_LINK_BORDER "; padding: 5px 10px; margin: none; text-align: center; text-decoration: none; display: inline-block; }"
@@ -129,7 +129,18 @@ const char html_main_css_collapse[] PROGMEM =
 ".collapsible { background-color: " COLOR_COLLAPSIBLE_BACKGROUND "; color: " COLOR_COLLAPSIBLE "; cursor: pointer; padding: 7px; width: 80%; border: none; text-align: left; outline: none; font-size: 14px; }"
 ".active, .collapsible:hover { background-color: " COLOR_COLLAPSIBLE_ACTIVE_BACKGROUND "; } .content { padding: 2px 18px; display: none; overflow: hidden; background-color: " COLOR_COLLAPSIBLE_CONTENT_BACKGROUND "; }";
 
-const char html_main_css_end[] PROGMEM = 
+// responsive layout, emitted last so it overrides the rules above (all pages use html_main_css_end)
+const char html_main_css_end[] PROGMEM =
+"html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; } body { margin: 0; }"
+".b1 { max-width: calc(100% - 44px); } textarea { max-width: 100%; box-sizing: border-box; } canvas { max-width: 100%; height: auto; box-sizing: border-box; }"
+"@media (max-width: 600px) {"
+".t, .b { margin-left: 8px; margin-right: 8px; padding-left: 6px; padding-right: 6px; } .t { margin-top: 8px; } .b { margin-bottom: 8px; }"
+".t td { display: block; text-align: left; }"
+".b1 { float: none; width: auto !important; max-width: none; margin: 6px 0; padding: 8px; padding-top: 3px; overflow-x: auto; }"
+".content { padding: 2px 8px; } .collapsible { width: 100%; } textarea { width: 100%; }"
+"input, select, textarea { font-size: 16px; }"
+".auxl { width: 5em !important; } .auxm { width: calc(100% - 9.5em) !important; } .auxr { width: 4em !important; } .auxm input[type=range] { width: 100% !important; box-sizing: border-box; margin: 0.5em 0 0 0; }"
+"}"
 "</STYLE>";
 
 // tile: begin takes title and width

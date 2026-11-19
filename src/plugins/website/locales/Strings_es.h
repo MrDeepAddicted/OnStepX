@@ -26,6 +26,8 @@
 #define L_OK "Ok"
 #define L_ON "On"
 #define L_OFF "Off"
+#define L_VISIT "Visitar"
+#define L_PAUSE "Pausa"
 #define L_START "Iniciar"
 #define L_DELTA "Delta"
 #define L_DP_MSG  "Rel."
@@ -309,6 +311,7 @@
 #define L_MERIDIAN_FLIP_AUTO "Volteo de meridiano automático en el límite"
 #define L_MERIDIAN_FLIP_NOW "Ahora"
 #define L_MERIDIAN_FLIP_PAUSE "Volteo de Meridiano, Pausa en Posicion de Inicio"
+#define L_MERIDIAN_FLIP_HOMING "Volteo de meridiano, posicion de inicio"
 #define L_MERIDIAN_FLIP_PPS "Volteo de Meridiano, lado del muelle preferido"
 
 #define L_ORIENTATION_AUTO "Cambio de orientación"
@@ -349,6 +352,17 @@
 #define L_LIMITS_RANGE_OVERHEAD "Tope Superior, altitud máxima 60 to 90&deg;"
 #define L_LIMITS_RANGE_MERIDIAN_E "Meridiano pasado al este  &pm;270&deg;"
 #define L_LIMITS_RANGE_MERIDIAN_W "Meridiano pasado al oeste &pm;270&deg;"
+
+// runtime sync limits
+#define L_SYNC_LIMITS_TITLE "Límites de sincronización/alineación"
+#define L_SYNC_LIMIT_SUMMARY_POLAR "Límite polar"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET1 "Límite de desfase, Eje1"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET2 "Eje2"
+#define L_SYNC_LIMIT_POLAR "Polar, 60 a 90&deg;"
+#define L_SYNC_LIMIT_AXIS1 "Desfase del eje 1, 0 a 30&deg;"
+#define L_SYNC_LIMIT_AXIS2 "Desfase del eje 2, 0 a 30&deg;"
+#define L_SYNC_LIMIT_POLAR_OFF "Polar 90 = OFF"
+#define L_SYNC_LIMIT_OFFSET_OFF "Desfase 0 = OFF"
 
 // location
 #define L_LOCATION_TITLE "Horario y Ubicación"

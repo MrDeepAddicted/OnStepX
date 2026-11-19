@@ -103,24 +103,24 @@ void handleAux() {
       data.concat(F("</div><br /><hr>"));
 
       if (state.featurePurpose() == SWITCH) {
-        data.concat(F("<div style='float: left; width: 8em; height: 2em; line-height: 2em'>"));
+        data.concat(F("<div class='auxl' style='float: left; width: 8em; height: 2em; line-height: 2em'>"));
 
-        data.concat(F("</div><div style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxm' style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
         snprintf_P(temp, sizeof(temp), html_auxOnSwitch, i + 1, i + 1); data.concat(temp);
         snprintf_P(temp, sizeof(temp), html_auxOffSwitch, i + 1, i + 1); data.concat(temp);
-        data.concat(F("</div><div style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxr' style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
 
         data.concat(F("</div>\n"));
         www.sendContentAndClear(data);
         j++;
       } else
       if (state.featurePurpose() == ANALOG_OUTPUT) {
-        data.concat(F("<div style='float: left; width: 8em; height: 2em; line-height: 2em'>"));
-        data.concat(F("</div><div style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
+        data.concat(F("<div class='auxl' style='float: left; width: 8em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxm' style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
         data.concat(FPSTR(html_auxAnalog));
         snprintf(temp, sizeof(temp), "%d' onchange=\"sz('x%dv1',this.value)\">", state.featureValue1(), i + 1);
         data.concat(temp);
-        data.concat(F("</div><div style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxr' style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
         snprintf(temp, sizeof(temp), "<span id='x%dv1'>%d</span>%%", i + 1, (int)lround((state.featureValue1()/255.0)*100.0));
         data.concat(temp);
         data.concat(F("</div>\n"));
@@ -128,40 +128,40 @@ void handleAux() {
         j++;
       } else
       if (state.featurePurpose() == DEW_HEATER) {
-        data.concat(F("<div style='float: left; width: 8em; height: 2em; line-height: 2em'>"));
+        data.concat(F("<div class='auxl' style='float: left; width: 8em; height: 2em; line-height: 2em'>"));
         #if UNITS == METRIC
           data.concat("DP " L_DP_MSG " (&deg;C)");
         #else
           data.concat("DP " L_DP_MSG " (&deg;F)");
         #endif
-        data.concat(F("</div><div style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxm' style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
         snprintf_P(temp, sizeof(temp), html_auxOnSwitch, i + 1, i + 1); data.concat(temp);
         snprintf_P(temp, sizeof(temp), html_auxOffSwitch, i + 1, i + 1); data.concat(temp);
-        data.concat(F("</div><div style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxr' style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
         dtostrf(celsiusToNativeRelative(state.featureValue4()), 3, 1, temp1);
         snprintf(temp, sizeof(temp), "&Delta;<span id='x%dv4'>%s</span>&deg;" TEMPERATURE_UNITS_ABV "\n", i + 1, temp1);
         data.concat(temp);
         data.concat(F("</div>\n"));
 
-        data.concat(F("<div style='float: left; width: 8em; height: 2em; line-height: 2em'>"));
+        data.concat(F("<div class='auxl' style='float: left; width: 8em; height: 2em; line-height: 2em'>"));
         data.concat(L_DP_ZERO);
-        data.concat(F("</div><div style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxm' style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
         data.concat(FPSTR(html_auxHeater));
         snprintf(temp, sizeof(temp), "%d' onchange=\"sz('x%dv2',this.value)\">", (int)lround(celsiusToNativeRelative(state.featureValue2())*DEW_HEATER_CONTROL_SCALE), i + 1);
         data.concat(temp);
-        data.concat(F("</div><div style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxr' style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
         dtostrf(celsiusToNativeRelative(state.featureValue2()), 3, 1, temp1);
         snprintf(temp, sizeof(temp), "<span id='x%dv2'>%s</span>&deg;" TEMPERATURE_UNITS_ABV "\n", i + 1, temp1);
         data.concat(temp);
         data.concat(F("</div>\n"));
         
-        data.concat(F("<div style='float: left; width: 8em; height: 2em; line-height: 2em'>"));
+        data.concat(F("<div class='auxl' style='float: left; width: 8em; height: 2em; line-height: 2em'>"));
         data.concat(L_DP_SPAN);
-        data.concat(F("</div><div style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxm' style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
         data.concat(FPSTR(html_auxHeater));
         snprintf(temp, sizeof(temp), "%d' onchange=\"sz('x%dv3',this.value)\">", (int)lround(celsiusToNativeRelative(state.featureValue3())*DEW_HEATER_CONTROL_SCALE), i + 1);
         data.concat(temp);
-        data.concat(F("</div><div style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxr' style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
         dtostrf(celsiusToNativeRelative(state.featureValue3()), 3, 1, temp1);
         snprintf(temp, sizeof(temp), "<span id='x%dv3'>%s</span>&deg;" TEMPERATURE_UNITS_ABV "\n", i + 1, temp1);
         data.concat(temp);
@@ -171,8 +171,8 @@ void handleAux() {
         j++;
       } else
       if (state.featurePurpose() == INTERVALOMETER) {
-        data.concat(F("<div style='float: left; width: 8em; height: 2em; line-height: 2em'>"));
-        data.concat(F("</div><div style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
+        data.concat(F("<div class='auxl' style='float: left; width: 8em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxm' style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
         data.concat(FPSTR(html_auxStartStop1));
         snprintf(temp, sizeof(temp), "x%dv1",i+1);
         data.concat(temp);
@@ -180,30 +180,30 @@ void handleAux() {
         snprintf(temp, sizeof(temp), "x%dv1",i+1);
         data.concat(temp);
         data.concat(FPSTR(html_auxStartStop3));
-        data.concat(F("</div><div style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxr' style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
         snprintf(temp, sizeof(temp), "<span id='x%dv1'>-</span>\n",i+1);
         data.concat(temp);
         data.concat(F("</div>\n"));
 
-        data.concat(F("<div style='float: left; text-align: right; width: 8em; height: 2em; line-height: 2em'>"));
+        data.concat(F("<div class='auxl' style='float: left; text-align: right; width: 8em; height: 2em; line-height: 2em'>"));
         data.concat(L_CAMERA_COUNT);
-        data.concat(F("</div><div style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxm' style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
         data.concat(FPSTR(html_auxCount));
         snprintf(temp, sizeof(temp), "%d' onchange=\"sz('x%dv4',this.value)\">",(int)state.featureValue4(),i+1);
         data.concat(temp);
-        data.concat(F("</div><div style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxr' style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
         dtostrf(state.featureValue4(),0,0,temp1);
         snprintf(temp, sizeof(temp), "<span id='x%dv4'>%s</span> x\n",i+1,temp1);
         data.concat(temp);
         data.concat(F("</div>\n"));
 
-        data.concat(F("<div style='float: left; text-align: right; width: 8em; height: 2em; line-height: 2em'>"));
+        data.concat(F("<div class='auxl' style='float: left; text-align: right; width: 8em; height: 2em; line-height: 2em'>"));
         data.concat(L_CAMERA_EXPOSURE);
-        data.concat(F("</div><div style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxm' style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
         data.concat(FPSTR(html_auxExposure));
         snprintf(temp, sizeof(temp), "%d' onchange=\"sz('x%dv2',this.value)\">",(int)timeToByte(state.featureValue2()),i+1);
         data.concat(temp);
-        data.concat(F("</div><div style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxr' style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
         float v; int d;
         v=state.featureValue2(); if (v < 1.0) d=3; else if (v < 10.0) d=2; else if (v < 30.0) d=1; else d=0;
         dtostrf(v,0,d,temp1);
@@ -211,13 +211,13 @@ void handleAux() {
         data.concat(temp);
         data.concat(F("</div>\n"));
 
-        data.concat(F("<div style='float: left; text-align: right; width: 8em; height: 2em; line-height: 2em'>"));
+        data.concat(F("<div class='auxl' style='float: left; text-align: right; width: 8em; height: 2em; line-height: 2em'>"));
         data.concat(L_CAMERA_DELAY);
-        data.concat(F("</div><div style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxm' style='float: left; width: 14em; height: 2em; line-height: 2em'>"));
         data.concat(FPSTR(html_auxDelay));
         snprintf(temp, sizeof(temp), "%d' onchange=\"sz('x%dv3',this.value)\">",(int)timeToByte(state.featureValue3()),i+1);
         data.concat(temp);
-        data.concat(F("</div><div style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
+        data.concat(F("</div><div class='auxr' style='float: left; width: 4em; height: 2em; line-height: 2em'>"));
         v=state.featureValue3(); if (v < 10.0) d=2; else if (v < 30.0) d=1; else d=0;
         dtostrf(v,0,d,temp1);
         snprintf(temp, sizeof(temp), "<span id='x%dv3'>%s</span> sec\n",i+1,temp1);

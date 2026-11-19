@@ -26,6 +26,8 @@
 #define L_OK "Ok"
 #define L_ON "On"
 #define L_OFF "Off"
+#define L_VISIT "Visita"
+#define L_PAUSE "Pausa"
 #define L_START "Iniciar"
 #define L_DELTA "Delta"
 #define L_DP_MSG  "Relativa"
@@ -309,6 +311,7 @@
 #define L_MERIDIAN_FLIP_AUTO "Canvi de meridià automàtic en el límit"
 #define L_MERIDIAN_FLIP_NOW "Canvia ara"
 #define L_MERIDIAN_FLIP_PAUSE "Aturar-se a l'origen en fer el canvi de meridià"
+#define L_MERIDIAN_FLIP_HOMING "Canvi de meridià, retorn a l'origen"
 #define L_MERIDIAN_FLIP_PPS "Costat preferit del peu per al canvi de meridià"
 
 #define L_ORIENTATION_AUTO "Canvi d'orientació"
@@ -349,6 +352,17 @@
 #define L_LIMITS_RANGE_OVERHEAD "Per sobre del cap, alçada màxima de 60 a 90&deg;"
 #define L_LIMITS_RANGE_MERIDIAN_E "Passat del meridià, a l'est del peu &pm;270&deg;"
 #define L_LIMITS_RANGE_MERIDIAN_W "Passat del meridià, a l'oest del peu &pm;270&deg;"
+
+// runtime sync limits
+#define L_SYNC_LIMITS_TITLE "Límits de sincronització/alineació"
+#define L_SYNC_LIMIT_SUMMARY_POLAR "Límit polar"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET1 "Límit de desplaçament, Eix1"
+#define L_SYNC_LIMIT_SUMMARY_OFFSET2 "Eix2"
+#define L_SYNC_LIMIT_POLAR "Polar, 60 a 90&deg;"
+#define L_SYNC_LIMIT_AXIS1 "Desplaçament de l'eix 1, 0 a 30&deg;"
+#define L_SYNC_LIMIT_AXIS2 "Desplaçament de l'eix 2, 0 a 30&deg;"
+#define L_SYNC_LIMIT_POLAR_OFF "Polar 90 = OFF"
+#define L_SYNC_LIMIT_OFFSET_OFF "Desplaçament 0 = OFF"
 
 // location
 #define L_LOCATION_TITLE "Hora i ubicació"
